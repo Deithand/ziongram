@@ -9643,6 +9643,9 @@
     <string name="StoriesAlbumNewAlbum">New Album</string>
     <string name="StoriesAlbumAddToAlbum">Add to Album</string>
     <string name="StoriesAlbumNameAllStories">All Stories</string>
+    <string name="DeveloperZiogram">Ziogram Developer</string>
+    <string name="DeveloperMode">Developer Mode</string>
+    <string name="AboutZiogram">Ziogram client - fork of Telegram. Source: https://github.com/Deithand/ziongram</string>
     <string name="StoriesAlbumCount_one">%d Album</string>
     <string name="StoriesAlbumCount_other">%d Albums</string>
     <string name="StoriesAlbumAddHint">Choose a name for your album and start adding your stories there.</string>

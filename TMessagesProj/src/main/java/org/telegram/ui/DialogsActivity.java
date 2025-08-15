@@ -409,6 +409,7 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
     private ActionBarMenuItem searchItem;
     private ActionBarMenuItem optionsItem;
     private ActionBarMenuItem speedItem;
+    private ActionBarMenuItem settingsItem;
     private AnimatorSet speedAnimator;
     private ActionBarMenuItem doneItem;
     private ProxyDrawable proxyDrawable;
@@ -3088,6 +3089,10 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
             downloadsItem.addView(new DownloadProgressIcon(currentAccount, context));
             downloadsItem.setContentDescription(getString(R.string.DownloadsTabs));
             downloadsItem.setVisibility(View.GONE);
+
+            settingsItem = menu.addItem(5, R.drawable.msg_settings);
+            settingsItem.setContentDescription("Quick settings");
+            settingsItem.setOnClickListener(v -> Toast.makeText(context, LocaleController.getString("DeveloperMode", R.string.DeveloperMode), Toast.LENGTH_SHORT).show());
 
             updatePasscodeButton();
             updateProxyButton(false, false);

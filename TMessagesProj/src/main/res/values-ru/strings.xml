@@ -263,4 +263,7 @@
     <string name="RemindTodayAt">\'Отправить сегодня в\' HH:mm</string>
     <string name="RemindDayAt">\'Отправить\' d MMM \'в\' HH:mm</string>
     <string name="RemindDayYearAt">\'Напомнить\' d MMM yyyy \'в\' HH:mm</string>
+    <string name="DeveloperZiogram">Разработчик Ziogram</string>
+    <string name="DeveloperMode">Режим разработчика</string>
+    <string name="AboutZiogram">Клиент Ziogram — форк Telegram. Репозиторий: https://github.com/Deithand/ziongram</string>
 </resources>
