@@ -1,7 +1,8 @@
-## Telegram messenger for Android
+## Ziogram – fork of Ziongram
 
-[Telegram](https://telegram.org) is a messaging app with a focus on speed and security. It’s superfast, simple and free.
-This repo contains the official source code for [Telegram App for Android](https://play.google.com/store/apps/details?id=org.telegram.messenger).
+Ziogram is a fork of [Ziongram](https://github.com/Deithand/ziongram) based on the Telegram Android source code. It focuses on developer friendly features and a modern dark-themed UI.
+
+![Ziogram screenshot](docs/screenshot.png)
 
 ## Creating your Telegram Application
 
@@ -33,6 +34,19 @@ You will require Android Studio 3.4, Android NDK rev. 20 and Android SDK 8.1
 5. Open the project in the Studio (note that it should be opened, NOT imported).
 6. Fill out values in TMessagesProj/src/main/java/org/telegram/messenger/BuildVars.java – there’s a link for each of the variables showing where and which data to obtain.
 7. You are ready to compile Telegram.
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Deithand/ziongram Ziogram
+   ```
+2. Open the project in Android Studio.
+3. Build and run.
+
+### About
+
+Use `/about` inside any chat to view client version, author of the fork and repository link.
 
 ### Localization
 

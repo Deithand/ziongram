@@ -160,6 +160,14 @@ public class SharedConfig {
                 .apply();
     }
 
+    public static void setDeveloperMode(boolean enabled) {
+        developerMode = enabled;
+        ApplicationLoader.applicationContext.getSharedPreferences("mainconfig", Activity.MODE_PRIVATE)
+                .edit()
+                .putBoolean("developerMode", developerMode)
+                .apply();
+    }
+
     private static String goodHevcEncoder;
     private static HashSet<String> hevcEncoderWhitelist = new HashSet<>();
     static {
@@ -254,6 +262,7 @@ public class SharedConfig {
     public static boolean storiesIntroShown;
     public static boolean disableVoiceAudioEffects;
     public static boolean forceDisableTabletMode;
+    public static boolean developerMode;
     public static boolean updateStickersOrderOnSend = true;
     public static boolean bigCameraForRound;
     public static Boolean useCamera2Force;
@@ -485,6 +494,7 @@ public class SharedConfig {
                 editor.putBoolean("hasEmailLogin", hasEmailLogin);
                 editor.putBoolean("floatingDebugActive", isFloatingDebugActive);
                 editor.putBoolean("record_via_sco", recordViaSco);
+                editor.putBoolean("developerMode", developerMode);
                 editor.apply();
             } catch (Exception e) {
                 FileLog.e(e);
@@ -590,6 +600,7 @@ public class SharedConfig {
             raiseToSpeak = preferences.getBoolean("raise_to_speak", false);
             nextMediaTap = preferences.getBoolean("next_media_on_tap", true);
             recordViaSco = preferences.getBoolean("record_via_sco", false);
+            developerMode = preferences.getBoolean("developerMode", false);
             customTabs = preferences.getBoolean("custom_tabs", true);
             inappBrowser = preferences.getBoolean("inapp_browser", true);
             adaptableColorInBrowser = preferences.getBoolean("adaptableBrowser", false);

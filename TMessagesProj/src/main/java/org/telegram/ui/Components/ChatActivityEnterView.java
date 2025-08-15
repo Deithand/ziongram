@@ -90,6 +90,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
@@ -6605,6 +6606,12 @@ public class ChatActivityEnterView extends BlurredFrameLayout implements Notific
 
     private boolean premiumEmojiBulletin = true;
     protected boolean sendMessageInternal(boolean notify, int scheduleDate, long payStars, boolean allowConfirm) {
+        String aboutText = messageEditText != null ? messageEditText.getText().toString().trim() : "";
+        if ("/about".equals(aboutText)) {
+            Toast.makeText(getContext(), LocaleController.getString("AboutZiogram", R.string.AboutZiogram), Toast.LENGTH_LONG).show();
+            setFieldText("");
+            return true;
+        }
         final Runnable send = () -> {
             if (slowModeTimer == Integer.MAX_VALUE && !isInScheduleMode()) {
                 if (delegate != null) {
